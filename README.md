@@ -17,14 +17,14 @@ Manages the storage and retrieval of StudentRecord objects in a database file (.
 - `loadRecords()`: Loads records from a file into the database, each converted to a byte array for storage.
 - `mergeRecords()`: Merges and compacts data from the main and overflow files, updating the B+ Tree index with new offsets.
 
-### Main.java:
+### Main.java
 Provides a command-line interface to interact with the database. It allows users to execute commands such as add, show, load, and merge through a terminal.
 - `add:` Prompts the user for student details and saves a new record.
 - `show`: Displays a record given a student ID.
 - `load`: Loads records from an external file.
 - `merge`: Merges main and overflow data for optimized storage.
 
-### StudentRecord.java:
+### StudentRecord.java
 Defines the StudentRecord class to store student details (ID, last name, first name, grade, overflow link).
 - `convertIntoBytes()`: Converts a student record to a 64-byte array for storage.
 - `convertFromBytes()`: Reconstructs a student record from a byte array.
